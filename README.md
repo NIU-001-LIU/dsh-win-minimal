@@ -94,3 +94,10 @@ preset 是声明式组装，改完新会话立即生效：
 ## License
 
 [MIT](LICENSE)
+
+## 开发
+
+```sh
+npm test          # 结构校验（preset 文件 + 安装器，零依赖）
+node --check index.js
+```
