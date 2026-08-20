@@ -1,3 +1,7 @@
+## 0.1.1 — 2026-08-20
+
+- README: clarify where the preset appears (new-session preset selector, not settings) and add a self-check for materialized files.
+
 # Changelog
 
 ## 0.1.0 — 2026-08-20

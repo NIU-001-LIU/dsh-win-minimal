@@ -60,10 +60,30 @@ DSH 官方自带 minimal preset，但它依赖**持久 bash 终端**——其就
 ### 方式一：插件安装
 
 ```sh
+# CLI / web profile
 dsh plugin --profile web add dsh-win-minimal
+
+# DSH Desktop
+dsh plugin --profile desktop add dsh-win-minimal
 ```
 
-重启 DSH → 新建会话 → preset 选择器里选 **「极简模式（Windows）」**。
+（`--profile` 换成你实际使用的 profile 名即可。）
+
+### 安装后在哪看到它 ⚠️
+
+**不在「插件」设置里**（它不是一个 UI 插件）。它在两处：
+
+1. **新建会话**时的 preset 下拉选择器（聊天输入框上方）——每次会话选它用
+2. **设置 → Agent（智能体）→ Agent Preset 面板**——预设列表里能看到并可设为默认值
+
+自查文件是否物化成功：
+
+```sh
+ls "$DSH_HOME/.agent-presets/win-minimal/"                  # Linux / macOS
+dir "%USERPROFILE%\.dsh\.agent-presets\win-minimal"          # Windows（未设 DSH_HOME 时）
+```
+
+文件在而两处都没有 → 完全重启 DSH 再看。仍无则提 issue，附上目录清单。
 
 插件会把 preset 文件物化到 `$DSH_HOME/.agent-presets/win-minimal/`。
 

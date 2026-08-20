@@ -1,6 +1,6 @@
 {
   "name": "dsh-win-minimal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Windows minimal agent preset for DeepSeek Harness: a one-line fixed persona, gitbash + str_replace_editor + web_search, no runtime context, no compaction. Installs the preset into the user's agent-presets root.",
   "type": "module",
   "main": "index.js",
@@ -13,7 +13,10 @@
     "index.js",
     "cordis.patch.yml",
     "README.md",
-    "LICENSE"
+    "README_EN.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "preset/"
   ],
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1"

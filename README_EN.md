@@ -40,8 +40,14 @@ This preset is its Windows equivalent: same fixed persona + complete mode, same 
 ## Quick start
 
 ```sh
+# CLI / web profile
 dsh plugin --profile web add dsh-win-minimal
+
+# DSH Desktop
+dsh plugin --profile desktop add dsh-win-minimal
 ```
+
+(Replace `--profile` with the profile you actually use.)
 
 Restart DSH, create a session, pick **Minimal (Windows)**. The plugin materializes the preset under `$DSH_HOME/.agent-presets/win-minimal/`.
 
