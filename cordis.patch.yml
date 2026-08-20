@@ -1,0 +1,7 @@
+# dsh-win-minimal — Windows 极简模式 preset 安装器
+# Host-only：把 win-minimal preset 物化到用户 agent-presets 根目录。
+# 无客户端、无注入、纯文件写入，失败静默降级。
+
+- insert:
+    - id: win-minimal-preset
+      name: dsh-win-minimal

@@ -1,0 +1,36 @@
+# Windows 版极简模式：固定提示词 + 双工具编码 Agent。
+# 持久 bash PTY 在 win32 不可用（subprocess-local 检查器仅支持 linux/darwin），
+# shell 能力由全局注册的 gitbash 工具提供（profile bundle 层，所有会话可见）。
+
+- id: persona
+  name: '@deepseek-ai/dsh-persona'
+  config:
+    text: You are a helpful software engineer assistant.
+    complete: true
+    includeRuntimeContext: false
+
+# 本地文件系统遮蔽宿主的沙箱 fs 提供方（仅本 preset 作用域）。
+# 编辑器共享该 realm，要求绝对路径。
+- id: filesystem
+  name: cordis:group
+  group: true
+  isolate:
+    fs: true
+  config:
+    - id: fs-local
+      name: '@deepseek-ai/dsh-fs-local'
+      config:
+        cwd: !!js process.env.DSH_CWD ?? process.cwd()
+
+    - id: str-replace-editor
+      name: '@deepseek-ai/dsh-tool-str-replace-editor'
+      config:
+        maxOutputChars: 16000
+
+# 联网搜索（web_search）：宿主的 web 缝已指向 dameng 网关（deepseek-v4-flash，
+# 见 settings.yaml 的 web-search-deepseek 段），零额外成本。
+- id: tool-web
+  name: '@deepseek-ai/dsh-tool-web'
+  config:
+    fetch: false
+    searchTimeoutMs: 60000
