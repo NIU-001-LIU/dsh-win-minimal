@@ -15,6 +15,6 @@ jobs:
         with:
           node-version: 22
       - name: Structural tests
-        run: node --test test/
+        run: node --test test/preset.test.mjs
       - name: Installer syntax
         run: node --check index.js

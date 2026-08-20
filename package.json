@@ -18,5 +18,8 @@
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/preset.test.mjs"
+  }
 }
