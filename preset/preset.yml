@@ -1,2 +1,2 @@
 name: '极简模式（Windows）'
-description: 'Windows 极简编码 Agent：gitbash + str_replace_editor + web_search，固定单句提示词、无运行时上下文、无上下文压缩。'
+description: 'Windows 极简编码 Agent：gitbash + str_replace_editor + web_search，固定单句提示词、无运行时上下文、含自动压缩（/compact）。'

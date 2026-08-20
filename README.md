@@ -4,7 +4,7 @@
 
 **让 Windows 上的 DeepSeek Harness 也有真正的极简模式。**
 
-一句话 persona · 零运行时上下文 · 三工具 · 固定最短前缀
+一句话 persona · 零运行时上下文 · 三工具 · 自动压缩 · 固定最短前缀
 
 [![npm](https://img.shields.io/npm/v/dsh-win-minimal)](https://www.npmjs.com/package/dsh-win-minimal)
 [![license](https://img.shields.io/badge/license-MIT-22c55e)](LICENSE)
@@ -49,7 +49,7 @@ DSH 官方自带 minimal preset，但它依赖**持久 bash 终端**——其就
 |---|---|---|
 | persona | 一句固定提示词 + complete | ✅ 相同 |
 | 运行时上下文 | 关闭 | ✅ 相同 |
-| 上下文压缩 | 无 | ✅ 相同 |
+| 上下文压缩 | 无 | ✅ 有（自动压缩 + /compact） |
 | 文件编辑 | str_replace_editor | ✅ 相同 |
 | shell | 持久 bash（PTY） | 一次性 gitbash（Windows 无解，等价替代） |
 

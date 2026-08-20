@@ -1,6 +1,6 @@
 {
   "name": "dsh-win-minimal",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Windows minimal agent preset for DeepSeek Harness: a one-line fixed persona, gitbash + str_replace_editor + web_search, no runtime context, no compaction. Installs the preset into the user's agent-presets root.",
   "type": "module",
   "main": "index.js",

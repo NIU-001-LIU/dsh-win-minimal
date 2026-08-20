@@ -1,3 +1,7 @@
+## 0.1.2 — 2026-08-20
+
+- Add the standard compaction chain to the preset (auto-compaction near the limit, /compact command, tool-result pruning) — same group as the standard preset.
+
 ## 0.1.1 — 2026-08-20
 
 - README: clarify where the preset appears (new-session preset selector, not settings) and add a self-check for materialized files.

@@ -59,10 +59,33 @@ const CORDIS = `# Windows 极简模式：固定提示词 + 轻工具编码 Agent
   config:
     fetch: false
     searchTimeoutMs: 60000
+
+# ── 上下文压缩 ─────────────────────────────────────────────────────────────
+# 与标准模式相同的压缩链：自动压缩（接近上限时较早历史压成摘要）+
+# /compact 手动压缩 + 工具结果裁剪。tokenMeter 仍在宿主平面（标准模式同款）。
+- id: compaction
+  name: cordis:group
+  group: true
+  isolate:
+    compaction: true
+    toolResultPruner: true
+  config:
+    - id: compaction-basic
+      name: '@deepseek-ai/dsh-compaction-basic'
+
+    - id: command-compact
+      name: '@deepseek-ai/dsh-command-compact'
+
+    - id: tool-result-pruner
+      name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+      config:
+        thresholdChars: 8192
+        headChars: 4096
+        tailChars: 1024
 `;
 
 const META = `name: '极简模式（Windows）'
-description: 'Windows 极简编码 Agent：gitbash + str_replace_editor + web_search，固定单句提示词、无运行时上下文、无上下文压缩。'
+description: 'Windows 极简编码 Agent：gitbash + str_replace_editor + web_search，固定单句提示词、无运行时上下文、含自动压缩（/compact）。'
 `;
 
 function dshHome() {

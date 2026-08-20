@@ -23,6 +23,8 @@ test('preset composition is a top-level row sequence', () => {
   assert.ok(cordis.includes('includeRuntimeContext: false'), 'runtime context must be suppressed');
   assert.ok(cordis.includes('str-replace-editor'), 'editor row missing');
   assert.ok(cordis.includes('dsh-tool-web'), 'web_search row missing');
+  assert.ok(cordis.includes('dsh-compaction-basic'), 'compaction chain missing');
+  assert.ok(cordis.includes('dsh-command-compact'), '/compact command missing');
 });
 
 test('preset metadata carries a display name', () => {

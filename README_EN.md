@@ -4,7 +4,7 @@
 
 **A real minimal mode for DeepSeek Harness on Windows.**
 
-One-line persona · zero runtime context · three tools · shortest fixed prefix
+One-line persona · zero runtime context · three tools · compaction included · shortest fixed prefix
 
 [![npm](https://img.shields.io/npm/v/dsh-win-minimal)](https://www.npmjs.com/package/dsh-win-minimal)
 [![license](https://img.shields.io/badge/license-MIT-22c55e)](LICENSE)
@@ -35,7 +35,7 @@ Three tools only:
 
 The shipped minimal preset relies on a **persistent bash PTY** whose readiness detection needs PTY process inspection — unsupported on win32. DSH Desktop therefore hides minimal on Windows entirely.
 
-This preset is its Windows equivalent: same fixed persona + complete mode, same no-runtime-context / no-compaction, same str_replace_editor — with the persistent bash swapped for one-shot gitbash (the platform's only honest equivalent). Because the prompt prefix is as short and as stable as it gets, KV-cache reuse across a long session is maximized.
+This preset is its Windows equivalent: same fixed persona + complete mode, same no-runtime-context, the standard compaction chain (auto + /compact) added back, same str_replace_editor — with the persistent bash swapped for one-shot gitbash (the platform's only honest equivalent). Because the prompt prefix is as short and as stable as it gets, KV-cache reuse across a long session is maximized.
 
 ## Quick start
 
