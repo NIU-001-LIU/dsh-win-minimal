@@ -10,6 +10,7 @@
 [![license](https://img.shields.io/badge/license-MIT-22c55e)](LICENSE)
 [![platform](https://img.shields.io/badge/platform-Windows-0078d4)]()
 [![topic](https://img.shields.io/badge/topic-dsh--plugin-blue)]()
+[![dshfind](https://dshfind.com/api/badge/jueburenshu123/dsh-win-minimal?lang=zh)](https://dshfind.com/zh/plugins/jueburenshu123/dsh-win-minimal)
 
 </div>
 
